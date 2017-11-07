@@ -5,3 +5,13 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+Farmer.destroy_all
+Cow.destroy_all
+
+15.times do
+  f = Farmer.create(name: Faker::Name.name)
+  3.times do
+    f.cows.create(name: Faker::Name.first_name)
+  end
+end

@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'nestedform/basic'
+
   root to: 'help#show'
 
   get '/showhide', to: 'showhide#show_hide'
@@ -11,7 +13,8 @@ Rails.application.routes.draw do
   post '/do_shrink', to: 'showhide#do_shrink'
   post '/do_unshrink', to: 'showhide#do_unshrink'
 
-
-
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  resources :farmer do
+    resources :cow
+  end
+  
 end
