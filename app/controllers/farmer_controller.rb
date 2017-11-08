@@ -29,9 +29,10 @@ class FarmerController < ApplicationController
         format.js { }
       end
     when :add_cow
+      puts "**** add cow in farmer controller"
       @farmer.cows.create(name: params[:name])
       respond_to do |format|
-        format.html { redirect_to @farmer, notice: 'Comment was successfully created.' }
+        format.html { redirect_to @farmer, notice: 'Cow was successfully created.' }
       end
     end
   end

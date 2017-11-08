@@ -5,7 +5,7 @@ Rails.application.routes.draw do
 
   get '/showhide', to: 'showhide#show_hide'
 
-  post '/do_show', to: 'showhide#do_show'
+  get '/do_show', to: 'showhide#do_show'
   post '/do_hide', to: 'showhide#do_hide'
   post '/do_toggle', to: 'showhide#do_toggle'
   post '/do_fadeout', to: 'showhide#do_fadeout'
@@ -16,5 +16,5 @@ Rails.application.routes.draw do
   resources :farmer do
     resources :cow
   end
-  
+
 end
