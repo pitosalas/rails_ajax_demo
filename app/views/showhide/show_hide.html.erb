@@ -22,12 +22,13 @@
   <%= link_to("hide", do_hide_path, remote: true, method: :post) %>
   <%= link_to("toggle", do_toggle_path, remote: true, method: :post) %>
 </p>
+
 <h3>Buttons</h3>
 <%= button_to("show", do_show_path, remote: true) %>
 <%= button_to("hide", do_hide_path, remote: true) %>
 <%= button_to("toggle", do_toggle_path, remote: true) %>
 
-<h2> More interesting transitions</h2>
+<h2> More interesting transitions!</h2>
 
 <%= link_to("fadeout", do_fadeout_path, remote: true, method: :post) %>
 <%= link_to("fadein", do_fadein_path, remote: true, method: :post) %>
