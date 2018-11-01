@@ -1,12 +1,11 @@
 class ShowhideController < ApplicationController
-  def show_hide; end
+  def show_hide
+  end
 
   def do_show
-    render js: "document.querySelector('#thing').style.visibility='visible';"
   end
 
   def do_hide
-    render js: "document.querySelector('#thing').style.visibility='hidden';"
   end
 
   def do_fadeout
